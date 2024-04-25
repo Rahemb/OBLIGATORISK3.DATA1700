@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funksjon for å vise alle billetter
     function displayTickets() {
         // Henter alle billetter fra serveren
-        fetch('/api/tickets')
+        fetch('/HentAlle')
             .then(response => response.json())
             .then(tickets => {
                 // Nullstiller listen

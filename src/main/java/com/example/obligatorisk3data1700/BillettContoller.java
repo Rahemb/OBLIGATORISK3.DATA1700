@@ -19,7 +19,7 @@ public class BillettContoller {
         rep.lagreBillett(innBillett);
     }
 
-    @GetMapping("/Hent alle")
+    @GetMapping("/HentAlle")
     public List<Billett> hentAlle() {
         return rep.hentAlleBilletter();
     }
