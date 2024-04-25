@@ -17,9 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         // Sender data til serveren for lagring
-        fetch('/Lagre', {
+        fetch('/lagre', {
             method: 'POST',
             headers: {
+                Accept: "application.json",
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)

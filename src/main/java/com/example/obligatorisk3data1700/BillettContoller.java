@@ -14,7 +14,7 @@ public class BillettContoller {
     @Autowired
     private BillettRepository rep;
 
-    @PostMapping("/Lagre")
+    @PostMapping("/lagre")
     public void lagreBillett(Billett innBillett) {
         rep.lagreBillett(innBillett);
     }
