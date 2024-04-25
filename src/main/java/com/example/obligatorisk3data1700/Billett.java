@@ -1,22 +1,20 @@
-// Ticket.java
+// Bilett.java
 package com.example.obligatorisk3data1700;
 
-public class Ticket {
+public class Billett {
     private String film;
-    private int antallBilletter;
-    private String fornavn;
-    private String etternavn;
-    private String telefon;
-    private String epost;
+    private String antallBilletter;
 
-    public Ticket(String film, int antallBilletter, String fornavn, String etternavn, String telefon, String epost) {
+    public Billett(String film, String antallBilletter){
         this.film = film;
         this.antallBilletter = antallBilletter;
-        this.fornavn = fornavn;
-        this.etternavn = etternavn;
-        this.telefon = telefon;
-        this.epost = epost;
+    }
+    public void Bilett(){
+
     }
 
-    // Getters and setters
+    public String getFilm() {return film;}
+    public void setFilm(String film) {this.film = film;}
+    public String getAntallBilletter(){return antallBilletter;}
+    public void setAntallBilletter(String antallBilletter) {this.antallBilletter = antallBilletter;}
 }

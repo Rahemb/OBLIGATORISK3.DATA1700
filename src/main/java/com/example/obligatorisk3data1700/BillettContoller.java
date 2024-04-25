@@ -1,30 +1,32 @@
+// BillettController.java
 package com.example.obligatorisk3data1700;
 
-// TicketController.java
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-public class TicketController {
+public class BillettContoller {
 
     @Autowired
-    private TicketRepository ticketRepository;
+    private BillettRepository rep;
 
-    @PostMapping("/kjopBillett")
-    public void kjopBillett(@RequestBody Ticket ticket) {
-        ticketRepository.save(ticket);
+    @PostMapping("/Lagre")
+    public void lagreBillett(Billett innBillett) {
+        rep.lagreBillett(innBillett);
     }
 
-    @GetMapping("/hentAlleBilletter")
-    public List<Ticket> hentAlleBilletter() {
-        return ticketRepository.findAll();
+    @GetMapping("/Hent alle")
+    public List<Billett> hentAlle() {
+        return rep.hentAlleBilletter();
     }
 
-    @GetMapping("/slettAlleBilletter")
-    public void slettAlleBilletter() {
-        ticketRepository.deleteAll();
+    @GetMapping("/SlettAlle")
+    public void slettAlle() {
+        rep.slettAlleBilletter();
     }
+
 }
