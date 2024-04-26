@@ -1,8 +1,12 @@
-CREATE TABLE kunde
+CREATE TABLE Billett
 (
     id INTEGER AUTO_INCREMENT NOT NULL,
-    navn VARCHAR(255) NOT NULL,
-    adresse VARCHAR(255) NOT NULL,
+    film VARCHAR(255) NOT NULL,
+    anntall VARCHAR(255) NOT NULL,
+    fornavn VARCHAR(255) NOT NULL,
+    etternavn VARCHAR(255) NOT NULL,
+    telefonnummer VARCHAR(255) NOT NULL,
+    epost VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 
 );
